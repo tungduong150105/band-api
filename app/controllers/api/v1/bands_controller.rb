@@ -18,7 +18,7 @@ class Api::V1::BandsController < ApplicationController
     @band = Band.new(band_params)
 
     if @band.save
-      render json: @band, status: :created, location: @band
+      render json: @band, status: :created
     else
       render json: @band.errors, status: :unprocessable_entity
     end
